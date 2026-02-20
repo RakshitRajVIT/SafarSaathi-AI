@@ -5,6 +5,182 @@
   text-align: center;
 }
 
+/* FABULOUS NAVBAR STYLES */
+.fabulous-navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2.5rem;
+  background: rgba(1, 18, 23, 0.95);
+  border-radius: 2.5rem;
+  box-shadow: 10px 10px 15px  rgba(8, 0, 7, 0.25);
+  overflow: visible;
+  z-index: 10;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  z-index: 20;
+}
+.logo-gradient {
+  background: linear-gradient(270deg, #e2c4af, #f9238a, #8ddef6, #43e97b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-move 3s linear infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes gradient-move {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+  transition: right 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.nav-link {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  padding: 0.3em 0.7em;
+  border-radius: 1em;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.nav-link:hover {
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px #ee097955;
+}
+
+.navbar-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  z-index: 30;
+  gap: 0.3rem;
+}
+.navbar-burger span {
+  display: block;
+  width: 2rem;
+  height: 0.25rem;
+  background: #fff;
+  border-radius: 1rem;
+  transition: all 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.navbar-burger.open span:nth-child(1) {
+  transform: translateY(0.55rem) rotate(45deg);
+}
+.navbar-burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar-burger.open span:nth-child(3) {
+  transform: translateY(-0.55rem) rotate(-45deg);
+}
+
+/* Mobile Styles */
+@media (max-width: 900px) {
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 70vw;
+    background: rgba(30, 34, 90, 0.98);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    z-index: 25;
+    transition: right 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  .navbar-links.open {
+    right: 0;
+  }
+  .navbar-burger {
+    display: flex;
+  }
+}
+
+/* Animated background blob
+.navbar-bg-blob {
+  position: absolute;
+  top: -40px;
+  right: -60px;
+  width: 220px;
+  height: 220px;
+  /* background: radial-gradient(circle at 60% 40%, #ee0979 0%, #ff6a00 100%); */
+  /* opacity: 0.25;
+  filter: blur(40px);
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.7s cubic-bezier(0.77,0.2,0.05,1.0);
+} */ */
+.navbar-bg-blob.open {
+  opacity: 0.5;
+  transform: scale(1.2) translate(-30px, 30px);
+}
+
+.navbar-auth-buttons {
+  display: flex;
+  gap: 0.5rem;
+  z-index: 20;
+}
+.auth-btn {
+  padding: 0.45em 1.4em;
+  font-size: 1.08rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 2em;
+  cursor: pointer;
+  background: linear-gradient(90deg, #00c3ff 0%, #43e97b 100%);
+  color: #fff;
+  box-shadow: 0 2px 12px #00c3ff44;
+  transition: background 0.3s, box-shadow 0.3s, transform 0.2s;
+  outline: none;
+  letter-spacing: 1px;
+}
+.auth-btn:hover {
+  background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  box-shadow: 0 4px 24px #ee097955;
+  transform: translateY(-2px) scale(1.04);
+}
+.signup-btn {
+  background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+  box-shadow: 0 2px 12px #ff6a0044;
+}
+.signup-btn:hover {
+  background: linear-gradient(90deg, #00c3ff 0%, #43e97b 100%);
+  box-shadow: 0 4px 24px #00c3ff55;
+}
+.login-btn {
+  background: linear-gradient(90deg, #00c3ff 0%, #43e97b 100%);
+  box-shadow: 0 2px 12px #00c3ff44;
+}
+.login-btn:hover {
+  background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
+  box-shadow: 0 4px 24px #ee097955;
+}
+
+@media (max-width: 900px) {
+  .navbar-auth-buttons {
+    display: none;
+  }
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
