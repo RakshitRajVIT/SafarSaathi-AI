@@ -1,11 +1,22 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* FABULOUS NAVBAR STYLES */
+.hero-section {
+  background-image: url('/SafarSaarthiBg.png');
+  background-size: cover;
+  background-position: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NAVBAR */
 .fabulous-navbar {
   position: relative;
   display: flex;
@@ -24,6 +35,7 @@
   font-weight: 800;
   letter-spacing: 2px;
   z-index: 20;
+  margin-right: 10.25rem;
 }
 .logo-gradient {
   background: linear-gradient(270deg, #e2c4af, #f9238a, #8ddef6, #43e97b 100%);
@@ -39,6 +51,14 @@
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
+}
+
+.navbar{
+  position:fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
 }
 
 .navbar-links {
@@ -115,20 +135,6 @@
   }
 }
 
-/* Animated background blob
-.navbar-bg-blob {
-  position: absolute;
-  top: -40px;
-  right: -60px;
-  width: 220px;
-  height: 220px;
-  /* background: radial-gradient(circle at 60% 40%, #ee0979 0%, #ff6a00 100%); */
-  /* opacity: 0.25;
-  filter: blur(40px);
-  border-radius: 50%;
-  z-index: 1;
-  transition: all 0.7s cubic-bezier(0.77,0.2,0.05,1.0);
-} */ */
 .navbar-bg-blob.open {
   opacity: 0.5;
   transform: scale(1.2) translate(-30px, 30px);
@@ -138,9 +144,12 @@
   display: flex;
   gap: 0.5rem;
   z-index: 20;
+  margin-left: 0;
+  align-items: center;
+  justify-content: center;
 }
 .auth-btn {
-  padding: 0.45em 1.4em;
+  padding: 0.55em 1.4em;
   font-size: 1.08rem;
   font-weight: 700;
   border: none;
@@ -161,23 +170,34 @@
 .signup-btn {
   background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
   box-shadow: 0 2px 12px #ff6a0044;
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .signup-btn:hover {
   background: linear-gradient(90deg, #00c3ff 0%, #43e97b 100%);
   box-shadow: 0 4px 24px #00c3ff55;
+  
 }
 .login-btn {
-  background: linear-gradient(90deg, #00c3ff 0%, #43e97b 100%);
-  box-shadow: 0 2px 12px #00c3ff44;
-}
-.login-btn:hover {
   background: linear-gradient(90deg, #ff6a00 0%, #ee0979 100%);
   box-shadow: 0 4px 24px #ee097955;
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.login-btn:hover {
+  background: linear-gradient(90deg, #00c3ff 0%, #43e97b 100%);
+  box-shadow: 0 2px 12px #00c3ff44;
+
 }
 
 @media (max-width: 900px) {
   .navbar-auth-buttons {
-    display: none;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 0;
+  align-items: center;
+  justify-content: center;
   }
 }
 
@@ -209,4 +229,5 @@
   }
 }
 
-.card {
+.card { 
+}

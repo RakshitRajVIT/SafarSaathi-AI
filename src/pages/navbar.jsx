@@ -27,10 +27,10 @@ export default function Navbar() {
 						{link.name}
 					</a>
 				))}
-			</div>
-			<div className="navbar-auth-buttons">
-				<button className="auth-btn signup-btn">Sign Up</button>
-				<button className="auth-btn login-btn">Login</button>
+	            <div className="navbar-auth-buttons">
+	                <button className="auth-btn signup-btn">Sign Up</button>
+	                <button className="auth-btn login-btn">Login</button>
+	            </div>
 			</div>
 			<div
 				className={`navbar-burger ${menuOpen ? "open" : ""}`}
