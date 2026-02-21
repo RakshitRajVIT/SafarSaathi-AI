@@ -8,7 +8,7 @@ function App() {
     <>
       <div className="navbar">
 
-      <Navbar />
+        <Navbar />
       </div>
       {/* ...other app content... */}
       <HeroSection />

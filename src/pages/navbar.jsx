@@ -27,12 +27,12 @@ export default function Navbar() {
 						{link.name}
 					</a>
 				))}
-	            <div className="navbar-auth-buttons">
-	                <button className="auth-btn signup-btn">Sign Up</button>
-	                <button className="auth-btn login-btn">Login</button>
-	            </div>
 			</div>
-			<div
+			<div className="navbar-auth-buttons">
+				<button className="auth-btn signup-btn">Sign Up</button>
+				<button className="auth-btn login-btn">Login</button>
+			</div>
+			{/* <div
 				className={`navbar-burger ${menuOpen ? "open" : ""}`}
 				onClick={() => setMenuOpen((v) => !v)}
 				aria-label="Toggle menu"
@@ -43,7 +43,7 @@ export default function Navbar() {
 				<span />
 				<span />
 			</div>
-			<div className={`navbar-bg-blob ${menuOpen ? "open" : ""}`}></div>
+			<div className={`navbar-bg-blob ${menuOpen ? "open" : ""}`}></div> */}
 		</nav>
 	);
 }
